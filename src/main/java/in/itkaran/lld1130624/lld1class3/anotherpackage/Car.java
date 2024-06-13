@@ -6,6 +6,9 @@ import java.sql.SQLOutput;
 
 public class Car extends Vehicle {
 
+    public Car() {
+        System.out.println("Car Constructor\n");
+    }
     public void showCar() {
         // public
         System.out.println(publicColor);
