@@ -18,5 +18,28 @@ public class Client {
         Student s2 = new Student(s1);
         s1.address.city = "Mumbai";
         System.out.println(s1.address.city + " " + s2.address.city);
+
+        // pass by value
+        int x = 5;
+        System.out.println("Pass by value");
+        System.out.println("before fun " + x);
+        fun(x);
+        System.out.println("after fun " + x);
+
+        // pass by reference
+        System.out.println("Pass by reference");
+        System.out.println("before fun " + s1.name);
+        fun(s1);
+        System.out.println("after fun " + s1.name);
+    }
+
+    public static void fun(int x) {
+        System.out.println("Change value to 10");
+        x = 10;
+    }
+
+    public static void fun(Student s) {
+        System.out.println("Change name to Ayushi");
+        s.name = "Ayushi";
     }
 }
