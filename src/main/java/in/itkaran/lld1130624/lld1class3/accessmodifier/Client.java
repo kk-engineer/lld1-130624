@@ -31,6 +31,25 @@ public class Client {
         System.out.println("before fun " + s1.name);
         fun(s1);
         System.out.println("after fun " + s1.name);
+
+        // Strings
+        // Reference: https://www.freecodecamp.org/news/strings-in-java/
+        // Creates a new string only when required
+        // Maintains a string pool for frequent strings for performance
+        // need not create the same string object again on heap and can be re-used
+        String str1 = "Hello";
+        String str2 = "Hello";
+        String str3 = new String("Hello");
+        char c1[] = {'H', 'e', 'l', 'l', 'o'};
+        String str4 = new String(c1);
+        System.out.println(str1);
+        System.out.println(str2);
+        System.out.println(str3);
+        System.out.println(str4);
+        System.out.println(str1==str4);
+        System.out.println(str1==str2);
+        System.out.println(str1==str3);
+        System.out.println(str1.equals(str4));
     }
 
     public static void fun(int x) {
