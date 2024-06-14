@@ -12,8 +12,8 @@ public class Someone {
         jointFamily.showPropertyDetails();
         System.out.println(jointFamily.publicProperty);
 
-        Relative relative = new Relative();
-        relative.showPropertyDetails();
-        relative.relativeAccess();
+        MaternalRelative maternalRelative = new MaternalRelative();
+        maternalRelative.showPropertyDetails();
+        maternalRelative.showAccess();
     }
 }
