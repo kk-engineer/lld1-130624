@@ -7,5 +7,6 @@ public class Relative extends JointFamily {
     public void relativeAccess() {
         System.out.println(publicProperty);
         System.out.println(protectedProperty);
+        showPrivatePropertyDetails();
     }
 }

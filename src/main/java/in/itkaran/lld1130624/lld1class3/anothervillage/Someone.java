@@ -9,11 +9,11 @@ public class Someone {
 
     private static void demoAccess() {
         JointFamily jointFamily = new JointFamily();
-        jointFamily.setPropertyNames();
+        jointFamily.showPropertyDetails();
         System.out.println(jointFamily.publicProperty);
 
         Relative relative = new Relative();
-        relative.setPropertyNames();
+        relative.showPropertyDetails();
         relative.relativeAccess();
     }
 }

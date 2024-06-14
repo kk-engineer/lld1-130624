@@ -7,7 +7,9 @@ public class Someone {
 
     public static void demoAccess() {
        JointFamily jointFamily = new JointFamily();
-       jointFamily.setPropertyNames();
+       jointFamily.showPropertyDetails();
+       jointFamily.showPrivatePropertyDetails();
+
        System.out.println(jointFamily.defaultProperty);
        System.out.println(jointFamily.protectedProperty);
        System.out.println(jointFamily.publicProperty);
