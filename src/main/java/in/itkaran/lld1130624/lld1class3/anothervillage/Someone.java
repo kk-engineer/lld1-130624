@@ -13,6 +13,7 @@ public class Someone {
         System.out.println(jointFamily.publicProperty);
 
         MaternalRelative maternalRelative = new MaternalRelative();
+        System.out.println(maternalRelative.publicProperty);
         maternalRelative.showPropertyDetails();
         maternalRelative.showAccess();
     }

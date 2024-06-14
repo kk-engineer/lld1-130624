@@ -19,6 +19,8 @@ public class Someone {
     public static void showRelativeAccess() {
         System.out.println("Show Paternal Relative Access");
         PaternalRelative paternalRelative = new PaternalRelative();
+        System.out.println(paternalRelative.protectedProperty);
+        System.out.println(paternalRelative.publicProperty);
         paternalRelative.showAccess();
     }
 }
