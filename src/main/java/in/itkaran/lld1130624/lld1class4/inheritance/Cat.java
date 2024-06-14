@@ -5,6 +5,10 @@ public class Cat extends Mammal {
         System.out.println("Cat with no args");
     }
 
+    public void whoAmI() {
+        System.out.println("I am a Cat!");
+    }
+
     Cat(String name) {
         System.out.println("Cat name: " + name);
     }
