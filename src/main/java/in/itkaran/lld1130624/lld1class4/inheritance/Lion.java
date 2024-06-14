@@ -4,6 +4,8 @@ import ch.qos.logback.core.encoder.JsonEscapeUtil;
 
 public class Lion extends Cat {
     Lion() {
+        // call to super must be first statement in constructor
+        // System.out.println("Before super: Lion");
         super();
         //super("Leo");
         //super("Leo", "White");
