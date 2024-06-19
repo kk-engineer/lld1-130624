@@ -8,13 +8,7 @@ public class Client {
     }
 
     private static void demoAccess() {
-//        Family family = new Family();
-//        family.showPropertyDetails();
-//        System.out.println(family.publicProperty);
-
-        MaternalRelative maternalRelative = new MaternalRelative();
-        System.out.println(maternalRelative.publicProperty);
-        maternalRelative.showPropertyDetails();
-        maternalRelative.showAccess();
+        Family family = new Family();
+        System.out.println(family.publicProperty);
     }
 }

@@ -7,14 +7,21 @@ public class Family {
     public String publicProperty;
 
     public void showPropertyDetails() {
-        //System.out.println(privateProperty);
+        System.out.println(privateProperty);
         System.out.println(defaultProperty);
         System.out.println(protectedProperty);
         System.out.println(publicProperty);
-        showPrivatePropertyDetails();
+        //showPrivatePropertyDetails();
     }
 
     protected void showPrivatePropertyDetails() {
         System.out.println(privateProperty);
+    }
+
+    class SubFamily {
+
+        public void showAccess() {
+            System.out.println(privateProperty);
+        }
     }
 }

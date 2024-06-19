@@ -3,14 +3,11 @@ package in.itkaran.lld1130624.lld1class3.village;
 public class Client {
     public static void main(String[] args) {
         demoAccess();
-        showRelativeAccess();
+        //showRelativeAccess();
     }
 
     public static void demoAccess() {
        Family family = new Family();
-       family.showPropertyDetails();
-       family.showPrivatePropertyDetails();
-
        System.out.println(family.defaultProperty);
        System.out.println(family.protectedProperty);
        System.out.println(family.publicProperty);
