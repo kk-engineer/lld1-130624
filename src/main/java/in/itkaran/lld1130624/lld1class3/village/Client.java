@@ -11,6 +11,9 @@ public class Client {
        System.out.println(family.defaultProperty);
        System.out.println(family.protectedProperty);
        System.out.println(family.publicProperty);
+
+       Relative relative = new Relative();
+       System.out.println("Debug");
     }
 
     public static void showRelativeAccess() {

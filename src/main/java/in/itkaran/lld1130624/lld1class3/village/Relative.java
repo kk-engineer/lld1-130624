@@ -6,5 +6,6 @@ public class Relative extends Family {
         System.out.println(protectedProperty);
         System.out.println(defaultProperty);
         System.out.println(publicProperty);
+        System.out.println(protectedProperty);
     }
 }

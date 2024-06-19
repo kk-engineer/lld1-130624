@@ -5,6 +5,10 @@ public class Family {
     Integer defaultProperty;
     protected Boolean protectedProperty;
     public String publicProperty;
+    public static String publicStaticProperty;
+    private static String privateStaticProperty;
+    protected static String protectedStaticProperty;
+    static String defaultStaticProperty;
 
     public void showPropertyDetails() {
         System.out.println(privateProperty);
