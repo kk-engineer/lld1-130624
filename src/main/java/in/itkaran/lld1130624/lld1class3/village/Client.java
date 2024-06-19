@@ -1,6 +1,6 @@
 package in.itkaran.lld1130624.lld1class3.village;
 
-public class Someone {
+public class Client {
     public static void main(String[] args) {
         demoAccess();
         showRelativeAccess();
@@ -18,9 +18,9 @@ public class Someone {
 
     public static void showRelativeAccess() {
         System.out.println("Show Paternal Relative Access");
-        PaternalRelative paternalRelative = new PaternalRelative();
-        System.out.println(paternalRelative.protectedProperty);
-        System.out.println(paternalRelative.publicProperty);
-        paternalRelative.showAccess();
+        Relative relative = new Relative();
+        System.out.println(relative.protectedProperty);
+        System.out.println(relative.publicProperty);
+        relative.showAccess();
     }
 }

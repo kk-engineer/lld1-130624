@@ -1,17 +1,17 @@
 package in.itkaran.lld1130624.lld1class3.accessmodifier;
 
 public class Student {
-    String name;
+    char[] name;
     int age;
     double psp;
-    String batch;
+    //char [] batch;
     Address address;
 
-    Student(String name, int age, double psp, String batch, Address address) {
+    Student(char[] name, int age, double psp, Address address) {
         this.name = name;
         this.age = age;
         this.psp = psp;
-        this.batch = batch;
+        //this.batch = batch;
         this.address = address;
     }
 
@@ -19,7 +19,10 @@ public class Student {
         this.name = s.name;
         this.age = s.age;
         this.psp = s.psp;
-        this.batch = s.batch;
+        //this.batch = s.batch;
         this.address = s.address;
+    }
+
+    public Student(String karan, int i) {
     }
 }

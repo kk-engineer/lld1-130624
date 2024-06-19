@@ -7,10 +7,10 @@ public class Vehicle {
     protected double protectedPrice;
 
     public void driveVehicle() {
-        privatePower = 1500;   // in CC
-        defaultModel = "Ferrari";
-        publicColor = "red";
-        protectedPrice = 50000;  // in USD
+        this.privatePower = 1500;   // in CC
+        this.defaultModel = "Ferrari";
+        this.publicColor = "red";
+        this.protectedPrice = 50000;  // in USD
     }
 
     // provide access of private attribute to child class

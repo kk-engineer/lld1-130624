@@ -1,10 +1,10 @@
 package in.itkaran.lld1130624.lld1class3.village;
 
 public class Family {
-    private String privateProperty = "Money";
-    String defaultProperty = "Fruits in garden";
-    protected String protectedProperty = "Rooms in house";
-    public String publicProperty = "Pond outside house";
+    private String privateProperty;
+    Integer defaultProperty;
+    protected Boolean protectedProperty;
+    public String publicProperty;
 
     public void showPropertyDetails() {
         //System.out.println(privateProperty);
