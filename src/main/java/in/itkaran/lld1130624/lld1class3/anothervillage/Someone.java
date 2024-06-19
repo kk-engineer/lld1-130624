@@ -1,6 +1,6 @@
 package in.itkaran.lld1130624.lld1class3.anothervillage;
 
-import in.itkaran.lld1130624.lld1class3.village.JointFamily;
+import in.itkaran.lld1130624.lld1class3.village.Family;
 
 public class Someone {
     public static void main(String[] args) {
@@ -8,9 +8,9 @@ public class Someone {
     }
 
     private static void demoAccess() {
-        JointFamily jointFamily = new JointFamily();
-        jointFamily.showPropertyDetails();
-        System.out.println(jointFamily.publicProperty);
+        Family family = new Family();
+        family.showPropertyDetails();
+        System.out.println(family.publicProperty);
 
         MaternalRelative maternalRelative = new MaternalRelative();
         System.out.println(maternalRelative.publicProperty);

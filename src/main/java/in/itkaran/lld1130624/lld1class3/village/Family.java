@@ -1,6 +1,6 @@
 package in.itkaran.lld1130624.lld1class3.village;
 
-public class JointFamily {
+public class Family {
     private String privateProperty = "Money";
     String defaultProperty = "Fruits in garden";
     protected String protectedProperty = "Rooms in house";

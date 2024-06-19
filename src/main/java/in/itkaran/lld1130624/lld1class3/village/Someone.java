@@ -7,13 +7,13 @@ public class Someone {
     }
 
     public static void demoAccess() {
-       JointFamily jointFamily = new JointFamily();
-       jointFamily.showPropertyDetails();
-       jointFamily.showPrivatePropertyDetails();
+       Family family = new Family();
+       family.showPropertyDetails();
+       family.showPrivatePropertyDetails();
 
-       System.out.println(jointFamily.defaultProperty);
-       System.out.println(jointFamily.protectedProperty);
-       System.out.println(jointFamily.publicProperty);
+       System.out.println(family.defaultProperty);
+       System.out.println(family.protectedProperty);
+       System.out.println(family.publicProperty);
     }
 
     public static void showRelativeAccess() {
