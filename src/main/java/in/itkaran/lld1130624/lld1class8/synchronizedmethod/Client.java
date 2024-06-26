@@ -1,8 +1,10 @@
-package in.itkaran.lld1130624.lld1class7.addersubtractor;
+package in.itkaran.lld1130624.lld1class8.synchronizedmethod;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
+
         Count count = new Count();
+
         Adder adder = new Adder(count);
         Subtractor subtractor = new Subtractor(count);
 
@@ -15,6 +17,6 @@ public class Client {
         t1.join();
         t2.join();
 
-        System.out.println(count.value);
+        System.out.println(count.getValue());
     }
 }

@@ -1,10 +1,16 @@
-package in.itkaran.lld1130624.lld1class7.addersubtractor;
+package in.itkaran.lld1130624.lld1class8.addersubtractorwithlock;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Client {
     public static void main(String[] args) throws InterruptedException {
+
         Count count = new Count();
-        Adder adder = new Adder(count);
-        Subtractor subtractor = new Subtractor(count);
+        Lock lock = new ReentrantLock();
+
+        Adder adder = new Adder(count, lock);
+        Subtractor subtractor = new Subtractor(count, lock);
 
         Thread t1 = new Thread(adder);
         Thread t2 = new Thread(subtractor);
