@@ -1,7 +1,7 @@
 package in.itkaran.lld1130624.lld1class9.semaphores;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Semaphore;
 
