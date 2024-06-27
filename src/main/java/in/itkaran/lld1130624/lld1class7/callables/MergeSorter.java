@@ -68,7 +68,6 @@ public class MergeSorter implements Callable<List<Integer>> {
             ++j;
         }
 
-        executorService.shutdown();
         return sortedArray;
     }
 }

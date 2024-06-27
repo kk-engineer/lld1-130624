@@ -19,8 +19,13 @@ public class Client {
 
         // Get the sorted list from future
         // This get() is a blocking call - wait on future to return the value.
-        List<Integer> sortedList = sortedListFuture.get();
-        System.out.println(sortedList);
+        try {
+            List<Integer> sortedList = sortedListFuture.get();
+            System.out.println(sortedList);
+        }
+        catch (InterruptedException | ExecutionException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
         executorService.shutdown();
     }
 }
