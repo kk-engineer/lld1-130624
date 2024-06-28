@@ -1,8 +1,6 @@
 package in.itkaran.lld1130624.lld1class10.generics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Client {
     public static void main(String[] args) {
@@ -61,6 +59,8 @@ public class Client {
         // Make a break point here and check the list created
         // all the lists will not have any type, such as, string, integer etc
         System.out.println("Debug");
+
+        Set<Integer> set = new HashSet<>();
     }
 
     private static void demoGenericMethod() {
