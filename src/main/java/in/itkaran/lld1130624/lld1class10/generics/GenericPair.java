@@ -20,4 +20,7 @@ public class GenericPair<F, S> {
         return second;
     }
 
+    public static <T> void fun(T data) {
+        System.out.println(data);
+    }
 }

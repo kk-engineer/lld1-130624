@@ -6,10 +6,11 @@ import java.util.List;
 
 public class Client {
     public static void main(String[] args) {
-        demoPair();
-        demoGenericPair();
-        demoRawDataTypes();
-        demoTypeErasure();
+        //demoPair();
+        //demoGenericPair();
+        //demoRawDataTypes();
+        //demoTypeErasure();
+        demoGenericMethod();
     }
 
     private static void demoPair() {
@@ -58,12 +59,13 @@ public class Client {
         List<Integer> numbers = new ArrayList<>();
         List<Double> doubles = new ArrayList<>();
         // Make a break point here and check the list created
+        // all the lists will not have any type, such as, string, integer etc
         System.out.println("Debug");
     }
 
-
-
-
-
-
+    private static void demoGenericMethod() {
+        GenericPair.fun("Hello");
+        GenericPair.fun(2);
+        GenericPair.fun(5.0);
+    }
 }
