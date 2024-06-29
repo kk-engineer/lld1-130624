@@ -69,5 +69,5 @@ public class MergeSorter implements Callable<List<Integer>> {
         }
 
         return sortedArray;
-    }
+    } 
 }
