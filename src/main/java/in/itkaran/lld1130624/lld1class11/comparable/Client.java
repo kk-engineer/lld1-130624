@@ -26,8 +26,5 @@ public class Client {
             Car car = priorityQueue.poll();
             System.out.println(car);
         }
-
-        List<Car> cars = new LinkedList<>();
-        Set<Car> carSet = new HashxSet<>();
     }
 }
