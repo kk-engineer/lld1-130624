@@ -8,7 +8,12 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
-        demoCheckedException();
+        try {
+            demoCheckedException();
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         demoUncheckedException();
     }
 
