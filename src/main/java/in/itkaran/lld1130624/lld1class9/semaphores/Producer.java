@@ -20,13 +20,14 @@ public class Producer implements Runnable {
 
     public void run() {
         while (true) {
-            System.out.println(this.name + " Adding an element , size : " + queue.size());
             try {
                 producerSemaphore.acquire();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println(this.name + " Adding an element , size : " + queue.size());
             queue.add(new Object());
+            System.out.println(this.name + " After -> Adding an element , size : " + queue.size());
             consumerSemaphore.release();
         }
 

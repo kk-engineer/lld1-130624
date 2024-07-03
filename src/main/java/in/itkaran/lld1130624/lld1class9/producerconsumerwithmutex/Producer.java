@@ -20,6 +20,7 @@ public class Producer implements Runnable {
                 if (this.queue.size() < this.maxSize) {
                     System.out.println(this.name + " Adding an element , size : " + queue.size());
                     queue.add(new Object());
+                    System.out.println(this.name + " After -> Adding an element , size : " + queue.size());
                 }
             }
 

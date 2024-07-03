@@ -20,13 +20,14 @@ public class Consumer implements Runnable {
 
     public void run() {
         while (true) {
-            System.out.println(this.name + " Removing an element , size : " + queue.size());
             try {
                 consumerSemaphore.acquire();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println(this.name + " Removing an element , size : " + queue.size());
             queue.remove();
+            System.out.println(this.name + " After -> Removing an element , size : " + queue.size());
             producerSemaphore.release();
         }
     }

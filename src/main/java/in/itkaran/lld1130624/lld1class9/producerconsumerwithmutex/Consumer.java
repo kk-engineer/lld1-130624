@@ -20,6 +20,7 @@ public class Consumer implements Runnable {
                 if (this.queue.size() > 0) {
                     System.out.println(this.name + " Removing an element , size : " + queue.size());
                     queue.remove();
+                    System.out.println(this.name + " After -> Removing an element , size : " + queue.size());
                 }
             }
 
