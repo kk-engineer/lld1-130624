@@ -14,6 +14,7 @@ public class DatabaseConnection {
         if (instance == null) {
             System.out.println("Instance NOT available " + Thread.currentThread().getName());
             synchronized (DatabaseConnection.class) {
+                System.out.println("Double check lock " + Thread.currentThread().getName());
                 if (instance == null) {
                     System.out.println("Creating Singleton instance " + Thread.currentThread().getName());
                     instance = new DatabaseConnection();
