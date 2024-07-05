@@ -7,8 +7,8 @@ public class Client {
     public static void main(String[] args) {
         //demoBound();
         //demoUpperBound();
-        //demoLowerBound();
-        demoMultipleBounds();
+        demoLowerBound();
+        //demoMultipleBounds();
     }
 
     private static void demoBound() {
@@ -62,5 +62,6 @@ public class Client {
     private static void demoMultipleBounds() {
         MultipleBound<Bounded> multipleBound = new MultipleBound<>();
         multipleBound.fun();
+        System.out.println("DEBUG");
     }
 }

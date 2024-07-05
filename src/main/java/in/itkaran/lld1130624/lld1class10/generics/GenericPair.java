@@ -27,7 +27,6 @@ public class GenericPair<F, S> {
 
     // Generic method
     public <K> void fun2(K key) {
-        System.out.println("fun2");
         System.out.println(key);
     }
 }

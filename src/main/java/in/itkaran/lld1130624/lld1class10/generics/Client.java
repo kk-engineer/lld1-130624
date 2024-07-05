@@ -8,7 +8,7 @@ public class Client {
         //demoGenericPair();
         //demoRawDataTypes();
         //demoTypeErasure();
-        //demoGenericMethod();
+        demoGenericMethod();
     }
 
     private static void demoPair() {
@@ -69,17 +69,16 @@ public class Client {
         GenericPair.fun("Hello");
         GenericPair.fun(2);
         GenericPair.fun(5.0);
-        // Generic method
-        GenericPair gp = new GenericPair();
-        gp.fun2("World");
 
-        Demo demo = new Demo();
-        demo.<String>fun("Hello");
-        demo.<Integer>fun(2);
+        // Generic method
+        GenericPair<String, Integer> gp = new GenericPair<String, Integer>();
+        gp.fun2("World");
+        gp.<String>fun2("Hello");
+        gp.<Integer>fun2(2);
         // Type inference - need not provide data type in angle brackets
-        demo.fun("KK");
-        demo.fun(2.0);
-        demo.fun(true);
-        demo.fun(5);
+        gp.fun2("KK");
+        gp.fun2(2.0);
+        gp.fun2(true);
+        gp.fun2(5);
     }
 }
