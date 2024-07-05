@@ -6,8 +6,9 @@ import java.util.List;
 public class Client {
     public static void main(String[] args) {
         //demoBound();
-        demoUpperBound();
+        //demoUpperBound();
         //demoLowerBound();
+        demoMultipleBounds();
     }
 
     private static void demoBound() {
@@ -56,5 +57,10 @@ public class Client {
         demo.fun5(dogs);
         demo.fun5(plants);
         demo.fun5(new ArrayList<>());
+    }
+
+    private static void demoMultipleBounds() {
+        MultipleBound<Bounded> multipleBound = new MultipleBound<>();
+        multipleBound.fun();
     }
 }
