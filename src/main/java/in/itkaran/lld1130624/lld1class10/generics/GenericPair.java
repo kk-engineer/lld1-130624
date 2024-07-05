@@ -20,7 +20,14 @@ public class GenericPair<F, S> {
         return second;
     }
 
+    // Generic static method
     public static <T> void fun(T data) {
         System.out.println(data);
+    }
+
+    // Generic method
+    public <K> void fun2(K key) {
+        System.out.println("fun2");
+        System.out.println(key);
     }
 }
