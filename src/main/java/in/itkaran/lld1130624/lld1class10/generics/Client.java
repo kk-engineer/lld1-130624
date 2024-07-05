@@ -59,8 +59,6 @@ public class Client {
         // Make a break point here and check the list created
         // all the lists will not have any type, such as, string, integer etc
         System.out.println("Debug");
-
-        Set<Integer> set = new HashSet<>();
     }
 
     private static void demoGenericMethod() {

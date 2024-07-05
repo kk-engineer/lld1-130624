@@ -2,7 +2,7 @@ package in.itkaran.lld1130624.lld1class10.bounds;
 
 import java.util.List;
 
-public class Demo {
+public class BoundDemo {
     public void fun(List<Animal> animals) {
         System.out.println("fun");
     }

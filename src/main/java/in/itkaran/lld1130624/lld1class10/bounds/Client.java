@@ -14,27 +14,27 @@ public class Client {
     private static void demoBound() {
         List<Animal> animals = new ArrayList<>();
         List<Dog> dogs = new ArrayList<>();
-        Demo demo = new Demo();
+        BoundDemo boundDemo = new BoundDemo();
         // Below statement will give compilation error
         //demo.fun(dogs);
-        demo.fun(animals);
+        boundDemo.fun(animals);
     }
 
     private static void demoUpperBound() {
         List<Animal> animals = new ArrayList<>();
         List<Dog> dogs = new ArrayList<>();
-        Demo demo = new Demo();
-        demo.fun2(animals);
-        demo.fun2(dogs);
+        BoundDemo boundDemo = new BoundDemo();
+        boundDemo.fun2(animals);
+        boundDemo.fun2(dogs);
         List<Plant> plants = new ArrayList<>();
-        demo.fun2(plants);
-        demo.fun2(new ArrayList<>());
+        boundDemo.fun2(plants);
+        boundDemo.fun2(new ArrayList<>());
 
-        demo.fun3(animals);
-        demo.fun3(dogs);
+        boundDemo.fun3(animals);
+        boundDemo.fun3(dogs);
         // Below statement will give compilation error
         //demo.fun3(plants);
-        demo.fun3(new ArrayList<>());
+        boundDemo.fun3(new ArrayList<>());
     }
 
     private static void demoLowerBound() {
@@ -42,21 +42,21 @@ public class Client {
         List<Mammal> mammals = new ArrayList<>();
         List<Dog> dogs = new ArrayList<>();
         List<Cat> cats = new ArrayList<>();
-        Demo demo = new Demo();
-        demo.fun4(animals);
-        demo.fun4(mammals);
-        demo.fun4(cats);
-        demo.fun4(new ArrayList<>());
+        BoundDemo boundDemo = new BoundDemo();
+        boundDemo.fun4(animals);
+        boundDemo.fun4(mammals);
+        boundDemo.fun4(cats);
+        boundDemo.fun4(new ArrayList<>());
         // Below statement will give compilation error
         //demo.fun4(dogs);
 
         List<Plant> plants = new ArrayList<>();
-        demo.fun5(animals);
-        demo.fun5(mammals);
-        demo.fun5(cats);
-        demo.fun5(dogs);
-        demo.fun5(plants);
-        demo.fun5(new ArrayList<>());
+        boundDemo.fun5(animals);
+        boundDemo.fun5(mammals);
+        boundDemo.fun5(cats);
+        boundDemo.fun5(dogs);
+        boundDemo.fun5(plants);
+        boundDemo.fun5(new ArrayList<>());
     }
 
     private static void demoMultipleBounds() {
