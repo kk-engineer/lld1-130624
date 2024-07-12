@@ -33,5 +33,8 @@ public class Client {
         // Compile time error because the constructor throws FileNotFoundException
         FileReader fileReader = new FileReader(file);
         fileReader.read();
+
+//        RuntimeException;
+//        Error;
     }
 }

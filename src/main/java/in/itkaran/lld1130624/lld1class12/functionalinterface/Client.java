@@ -1,8 +1,6 @@
 package in.itkaran.lld1130624.lld1class12.functionalinterface;
 
-import in.itkaran.lld1130624.lld1class9.semaphores.Consumer;
-
-import java.util.function.BiConsumer;
+import java.util.function.*;
 
 public class Client {
 
@@ -27,5 +25,17 @@ public class Client {
             }
         };
         biConsumer.accept("Scaler", 5);
+
+        /*
+        1. Consumer;
+        2. BiConsumer;
+        3. Predicate<String> predicate = new Predicate<String>() {};
+        4. BiPredicate;
+        5. Function<String, String> function = new Function<String, String>() {};
+        6. BiFunction;
+        7. BinaryOperator extends BiFunction;
+         */
+
+
     }
 }

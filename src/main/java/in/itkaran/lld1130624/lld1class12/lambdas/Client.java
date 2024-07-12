@@ -10,7 +10,7 @@ public class Client {
     public static void main(String[] args) {
 
         //demoLambdas();
-        //demoConcreteExamples();
+        //demoRunnableExample();
         demoComparator();
     }
 
@@ -45,7 +45,7 @@ public class Client {
         System.out.println(biPredicate.test("Scaler", 5));
     }
 
-    private static void demoConcreteExamples() {
+    private static void demoRunnableExample() {
         System.out.println("Hello World printed by " + Thread.currentThread().getName());
 
         Runnable runnable = () -> System.out.println("Hello World printed by " + Thread.currentThread().getName());
@@ -66,6 +66,9 @@ public class Client {
 
         Comparator<Student> marksComparator = (st1, st2) -> st1.marks - st2.marks;
         students.sort(marksComparator);
+        System.out.println(students);
+        Comparator<Student> rollNoComparator = (st1, st2) -> st1.rollNumber - st2.rollNumber;
+        students.sort(rollNoComparator);
         System.out.println(students);
     }
 
