@@ -8,7 +8,13 @@ public class Client {
 
     public static void demoCopyConstructor() {
         Student st1 = new Student("KK", 40);
-        Student st2 = new Student(st1);
+        Student st2 = st1.copy();
+
+        Student is = new IntelligentStudent("KK", 140, 160);
+        Student isCopy = is.copy();
+
+        Student cs = new CreativeStudent("AK", 28, 200);
+        Student csCopy = cs.copy();
         System.out.println("Debug");
     }
 }

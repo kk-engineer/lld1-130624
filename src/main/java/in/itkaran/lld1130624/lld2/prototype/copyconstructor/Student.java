@@ -14,8 +14,20 @@ public class Student {
     }
 
     public Student(Student student) {
-        System.out.println("Default constructor");
+        System.out.println("Student copy constructor");
         this.name = student.name;
         this.age = student.age;
+    }
+
+    public Student copy() {
+        if (this instanceof IntelligentStudent) {
+            IntelligentStudent is = (IntelligentStudent) this;
+            return new IntelligentStudent(is);
+        }
+        else if (this instanceof CreativeStudent) {
+            CreativeStudent cs = (CreativeStudent) this;
+            return new CreativeStudent(cs);
+        }
+        return new Student(this);
     }
 }
