@@ -35,12 +35,12 @@ public class Student {
         private String univName;
         private int gradYear;
 
+        // Setters
         public Builder setName(String name) {
             this.name = name;
             return this;
         }
 
-        // Setters
         public Builder setAge(int age) {
             this.age = age;
             return this;
@@ -90,6 +90,7 @@ public class Student {
             return new Student(this);
         }
 
+        // Getters
         public String getName() {
             return name;
         }

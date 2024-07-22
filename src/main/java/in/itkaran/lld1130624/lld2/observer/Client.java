@@ -1,5 +1,8 @@
 package in.itkaran.lld1130624.lld2.observer;
 
+import java.util.ArrayDeque;
+import java.util.PriorityQueue;
+
 public class Client {
     public static void main(String[] args) {
         demoObserver();
