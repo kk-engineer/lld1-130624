@@ -13,18 +13,22 @@ public class Client {
         Subscriber subscriber1 = new EmailService();
         Subscriber subscriber2 = new InventoryService();
         Subscriber subscriber3 = new LogisticService();
+        Subscriber subscriber4 = new SmsService();
+        Subscriber subscriber5 = new InvoiceService();
 
         // subscribe for notifications
-        amazon.subscribe(subscriber1);
-        amazon.subscribe(subscriber2);
-        amazon.subscribe(subscriber3);
+        amazon.register(subscriber1);
+        amazon.register(subscriber2);
+        amazon.register(subscriber3);
+        amazon.register(subscriber4);
+        amazon.register(subscriber5);
 
         // notify all subscribers
         amazon.notifySubscribers();
 
         // unsubscribe
         System.out.println("Unsubscribe Logistic Service");
-        amazon.unsubscribe(subscriber3);
+        amazon.deregister(subscriber3);
 
         // notify all subscribers
         amazon.notifySubscribers();

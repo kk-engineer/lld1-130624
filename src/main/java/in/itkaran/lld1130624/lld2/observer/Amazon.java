@@ -1,23 +1,26 @@
 package in.itkaran.lld1130624.lld2.observer;
 
-import javax.security.auth.Subject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Amazon {
+public class Amazon implements Publisher {
     private List<Subscriber> subscribers = new ArrayList<>();
 
-    public void subscribe(Subscriber subscriber) {
+    public void register(Subscriber subscriber) {
         subscribers.add(subscriber);
     }
 
-    public void unsubscribe(Subscriber subscriber) {
+    public void deregister(Subscriber subscriber) {
         subscribers.remove(subscriber);
     }
 
-    void notifySubscribers() {
+    public void notifySubscribers() {
         for (Subscriber subscriber : subscribers) {
-            subscriber.notifyMe();
+            subscriber.update();
         }
+    }
+
+    public void onOrderPlaced() {
+        notifySubscribers();
     }
 }

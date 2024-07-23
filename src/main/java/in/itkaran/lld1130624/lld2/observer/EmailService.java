@@ -4,7 +4,7 @@ import java.util.Observer;
 
 public class EmailService implements Subscriber {
     @Override
-    public void notifyMe() {
+    public void update() {
         System.out.println("Sending email");
     }
 }
