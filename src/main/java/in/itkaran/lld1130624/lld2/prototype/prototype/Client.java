@@ -3,8 +3,8 @@ package in.itkaran.lld1130624.lld2.prototype.prototype;
 public class Client {
     public static void main(String[] args) {
 
-        //demoPrototype();
-        demoRegistry();
+        demoPrototype();
+        //demoRegistry();
     }
 
     private static void fillRegistry(StudentRegistry studentRegistry) {
@@ -49,6 +49,7 @@ public class Client {
         // can we use copy constructor - No
         Student st5 = st3.copy();
         Student st6 = st1.copy();
+        Student st7 = st4.copy();
         System.out.println("Debug");
     }
 }

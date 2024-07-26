@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Client {
     public static void main(String[] args) {
-
         demoCopyConstructor();
     }
 
@@ -13,7 +12,7 @@ public class Client {
         List<Student> students = new ArrayList<>();
         List<Student> studentsCopy = new ArrayList<>();
         Student st1 = new Student("KK", 40);
-        Student is = new IntelligentStudent("KK", 140, 160);
+        Student is = new IntelligentStudent("KK", 40, 160);
         Student cs = new CreativeStudent("AK", 28, 200);
 
         students.add(st1);

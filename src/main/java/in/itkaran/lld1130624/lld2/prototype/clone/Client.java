@@ -2,7 +2,7 @@ package in.itkaran.lld1130624.lld2.prototype.clone;
 
 public class Client {
     public static void main(String[] args) {
-        try{
+        try {
             demoClone();
         }
         catch (CloneNotSupportedException e){
