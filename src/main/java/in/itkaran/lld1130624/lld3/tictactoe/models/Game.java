@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Getter
 @Setter
@@ -23,8 +24,9 @@ public class Game {
         this.moves = new ArrayList<>();
         this.board = new Board(dimension);
         this.gameState = GameState.IN_PROGRESS;
-        this.nextPlayerIndex = 0;
         this.winningStrategies = winningStrategies;
+        Random rand = new Random();
+        this.nextPlayerIndex = rand.nextInt(players.size());
     }
 
 

@@ -19,11 +19,11 @@ public class Client {
     private static void playTicTacToe() {
         System.out.println("Lets play TicTacToe!");
         List<Player> players = new ArrayList<>();
-        players.add(new Player("AK", new Symbol('A'), PlayerType.HUMAN));
+        //players.add(new Player("AK", new Symbol('A'), PlayerType.HUMAN));
         //players.add(new Player("KK", new Symbol('K'), PlayerType.HUMAN));
         players.add(new Bot("Bot1", new Symbol('B'), BotDifficultyLevel.MEDIUM));
         players.add(new Bot("Bot2", new Symbol('C'), BotDifficultyLevel.MEDIUM));
-
+        //players.add(new Bot("Bot3", new Symbol('D'), BotDifficultyLevel.MEDIUM));
         int dimension = players.size() + 1;
 
         List<WinningStrategy> winningStrategies = List.of(
@@ -40,9 +40,13 @@ public class Client {
             gameController.makeMove();
         }
 
+        System.out.println("Game Over!");
+        gameController.printBoard();
+
         if (gameController.getGameState().equals(GameState.ENDED)) {
-            gameController.printBoard();
-            System.out.println(gameController.getWinner().getName() + " won the game!");
+            System.out.println(gameController.getWinner().getName() +
+                    " Symbol " + gameController.getWinner().getSymbol().getSymbol() +
+                    " won the game!");
         } else {
             System.out.println("Game Draw!");
         }

@@ -1,4 +1,4 @@
-package in.itkaran.lld1130624.lld2.strategy;
+package in.itkaran.lld1130624.lld2.strategy.strategies;
 
 public class BikePathCalculator implements PathCalculator {
     @Override

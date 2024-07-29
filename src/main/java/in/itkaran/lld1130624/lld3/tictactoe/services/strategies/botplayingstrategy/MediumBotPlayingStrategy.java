@@ -10,6 +10,7 @@ import java.util.Random;
 public class MediumBotPlayingStrategy implements BotPlayingStrategy {
     @Override
     public Cell makeMove(Board board) {
+        // Generate a random number, check if that cell is empty and make move
         int row, col;
         do {
             Random rand = new Random();

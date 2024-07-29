@@ -1,6 +1,6 @@
 package in.itkaran.lld1130624.lld2.strategy;
 
-import java.nio.file.Path;
+import in.itkaran.lld1130624.lld2.strategy.strategies.PathCalculator;
 
 public class GoogleMap {
     private PathCalculator pathCalculator;
