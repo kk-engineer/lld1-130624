@@ -1,5 +1,7 @@
 package in.itkaran.lld1130624.lld2.adapter;
 
+import in.itkaran.lld1130624.lld2.adapter.adapters.BankApi;
+
 public class PhonePe {
     private BankApi bankApi;
 

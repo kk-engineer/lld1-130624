@@ -1,0 +1,39 @@
+classDiagram
+    class GoogleMap {
+        - PathCalculator pathCalculator
+        + findPath(String source, String target)
+    }
+
+    class PathCalculator {
+        <<interface>>
+        + findPath(String source, String target)
+    }
+
+    GoogleMap o-- PathCalculator
+
+    class BikePathCalculator {
+        + findPath(String source, String target)
+    }
+
+    class CarPathCalculator {
+        + findPath(String source, String target)
+    }
+
+    class WalkPathCalculator {
+        + findPath(String source, String target)
+    }
+
+    PathCalculator <|.. BikePathCalculator : implements
+    PathCalculator <|.. CarPathCalculator : implements
+    PathCalculator <|.. WalkPathCalculator : implements
+
+    class ModeType {
+        <<enumeration>>
+        BIKE,
+        CAR,
+        WALK
+    }
+
+    class PathCalculatorFactory {
+        + getPathCalculator(ModeType modeType): PathCalculator $
+    }

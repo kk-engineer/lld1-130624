@@ -1,4 +1,4 @@
-package in.itkaran.lld1130624.lld2.adapter;
+package in.itkaran.lld1130624.lld2.adapter.adapters;
 
 public interface BankApi {
 

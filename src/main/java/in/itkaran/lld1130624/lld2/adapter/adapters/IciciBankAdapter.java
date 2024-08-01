@@ -1,6 +1,5 @@
 package in.itkaran.lld1130624.lld2.adapter.adapters;
 
-import in.itkaran.lld1130624.lld2.adapter.BankApi;
 import in.itkaran.lld1130624.lld2.adapter.thirdparty.icicibank.IciciBank;
 
 public class IciciBankAdapter implements BankApi {
