@@ -37,3 +37,5 @@ classDiagram
     class PathCalculatorFactory {
         + getPathCalculator(ModeType modeType): PathCalculator $
     }
+
+    PathCalculatorFactory ..> ModeType
