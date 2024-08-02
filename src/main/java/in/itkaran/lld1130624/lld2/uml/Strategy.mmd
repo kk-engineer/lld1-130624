@@ -11,18 +11,6 @@ classDiagram
 
     GoogleMap o-- PathCalculator
 
-    class BikePathCalculator {
-        + findPath(String source, String target)
-    }
-
-    class CarPathCalculator {
-        + findPath(String source, String target)
-    }
-
-    class WalkPathCalculator {
-        + findPath(String source, String target)
-    }
-
     PathCalculator <|.. BikePathCalculator : implements
     PathCalculator <|.. CarPathCalculator : implements
     PathCalculator <|.. WalkPathCalculator : implements

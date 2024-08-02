@@ -13,26 +13,11 @@ classDiagram
 
     class Amazon {
         - List~Subscriber~ subscribers
-        + subscribe(Subscriber Subscriber)
-        + unsubscribe(Subscriber Subscriber)
-        + notifySubscribers()
     }
 
     Publisher <|-- Amazon : implements
     Amazon o-- Subscriber : has
 
-
-    class EmailService {
-        + update()
-    }
-
-    class SmsService {
-        + update()
-    }
-
-    class InventoryService {
-        + update()
-    }
 
     Subscriber <|-- EmailService : implements
     Subscriber <|-- SmsService : implements
