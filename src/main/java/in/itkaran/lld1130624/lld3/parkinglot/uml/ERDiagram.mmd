@@ -1,0 +1,151 @@
+erDiagram
+    ParkingLot {
+        int parking_lot_id
+        int status_id
+        int sps_id
+        int fcs_id
+    }
+
+    ParkingLotStatus {
+        int status_id
+        string status_name
+    }
+
+    SpotAssignmentStrategy {
+        int sps_id
+        string sps_name
+    }
+
+    FeeCalculationStrategy {
+        int fcs_id
+        string fcs_name
+    }
+
+    ParkingLot }| -- || ParkingLotStatus : status
+    ParkingLot }| -- || SpotAssignmentStrategy : spotAssignmentStrategy
+    ParkingLot }| -- || FeeCalculationStrategy: feeCalculationStrategy
+
+    Gate {
+        int gate_id
+        int gate_number
+        int gate_type_id
+        int parking_lot_id
+        int operator_id
+    }
+
+    GateType {
+        int gate_type_id
+        string gate_type_name
+    }
+
+    Gate }| -- || GateType : gateType
+    ParkingLot || -- |{ Gate : has
+    Gate || -- || User : operator
+
+    ParkingFloor {
+        int parking_floor_id
+        int floor_number
+        int parking_lot_id
+        int status_id
+    }
+
+    ParkingFloorStatus {
+        int status_id
+        string status_name
+    }
+
+    ParkingLot || -- |{ ParkingFloor : has
+    ParkingFloor }| -- || ParkingFloorStatus : status
+
+    ParkingSpot {
+        int parking_spot_id
+        int parking_floor_id
+        int spot_number
+        int status_id
+        int vehicle_type_id
+    }
+
+    VehicleType {
+        int vehicle_type_id
+        string vehicle_type_name
+    }
+
+    ParkingSpotStatus {
+        int status_id
+        string status_name
+    }
+
+    ParkingFloor || -- |{ ParkingSpot : has
+    ParkingSpot }| -- || ParkingSpotStatus : status
+    ParkingSpot }| -- || VehicleType : vehicleType
+
+    Vehicle {
+        int vehicle_id
+        string license_number
+        int vehicle_type_id
+        int owner_id
+    }
+
+    User {
+        int user_id
+        string name
+        string email
+        string phone
+    }
+
+    Vehicle }| -- || VehicleType : vehicleType
+    Vehicle }| -- || User : owner
+
+    ParkingTicket {
+        int ticket_id
+        int ticket_number
+        int parking_spot_id
+        int vehicle_id
+        dateTime entry_time
+        int operator_id
+        int gate_id
+    }
+
+    ParkingTicket || -- || Vehicle : vehicle
+    ParkingTicket || -- || User : operator
+    ParkingTicket || -- || Gate : gate
+    ParkingTicket }| -- || ParkingSpot : parkingSpot
+
+    Bill {
+        int bill_id
+        int bill_number
+        int parking_ticket_id
+        dateTime exit_time
+        int amount
+        int gate_id
+        int operator_id
+    }
+
+    Bill || -- || ParkingTicket : parkingTicket
+    Bill || -- || User : operator
+    Bill || -- || Gate : gate
+
+    Payment {
+        int payment_id
+        int bill_id
+        int amount
+        dateTime payment_time
+        string reference_id
+        int payment_status
+        int payment_mode
+    }
+
+    PaymentStatusType {
+        int payment_status_id
+        string status_name
+    }
+
+    PaymentModeType {
+        int payment_mode_id
+        string mode_name
+    }
+
+    Bill || -- |{ Payment : payments
+    Payment }| -- || PaymentStatusType : paymentStatus
+    Payment }| -- || PaymentModeType : paymentMode
+
