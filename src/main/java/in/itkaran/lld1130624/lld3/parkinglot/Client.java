@@ -36,7 +36,7 @@ public class Client {
         IssueTicketRequestDto requestDto = new IssueTicketRequestDto();
         requestDto.setGateId(123L);
         requestDto.setVehicleNumber("KA-01-HH-1234");
-        requestDto.setVehicleType(VehicleType.CAR);
+        requestDto.setVehicleType(VehicleType.FOUR_WHEELER);
         requestDto.setOwnerName("Karan");
 
         TicketController ticketController = new TicketController(ticketService);
@@ -51,7 +51,7 @@ public class Client {
 
     private static void createTestData() {
         // Create parking spots
-        List<VehicleType> supportedVehicleTypes = List.of(VehicleType.CAR, VehicleType.BIKE);
+        List<VehicleType> supportedVehicleTypes = List.of(VehicleType.FOUR_WHEELER, VehicleType.TWO_WHEELER);
         ParkingSpot parkingSpot1 = new ParkingSpot();
         parkingSpot1.setSupportedVehicleTypes(supportedVehicleTypes);
         parkingSpot1.setStatus(ParkingSpotStatus.VACANT);
