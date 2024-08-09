@@ -12,7 +12,6 @@ public class BotPlayingStrategyFactory {
             case EASY -> new EasyBotPlayingStrategy();
             case MEDIUM -> new MediumBotPlayingStrategy();
             case HARD -> new HardBotPlayingStrategy();
-            default -> new MediumBotPlayingStrategy();
         };
     }
 }

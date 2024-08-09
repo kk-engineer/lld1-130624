@@ -15,7 +15,7 @@ public class RowWinningStrategy implements WinningStrategy {
         int row = move.getCell().getRow();
         Symbol symbol = move.getPlayer().getSymbol();
 
-        // check in current row present in map
+        // check if current row present in map
         if (!rowCounts.containsKey(row)) {
             rowCounts.put(row, new HashMap<>());
         }

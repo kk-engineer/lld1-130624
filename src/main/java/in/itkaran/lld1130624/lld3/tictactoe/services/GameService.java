@@ -1,6 +1,5 @@
 package in.itkaran.lld1130624.lld3.tictactoe.services;
 
-import in.itkaran.lld1130624.lld3.tictactoe.exceptions.InvalidMoveException;
 import in.itkaran.lld1130624.lld3.tictactoe.models.*;
 import in.itkaran.lld1130624.lld3.tictactoe.services.strategies.winningstrategy.WinningStrategy;
 
@@ -15,16 +14,6 @@ public class GameService {
                 .setPlayers(players)
                 .setWinningStrategies(winningStrategies)
                 .build();
-    }
-
-    private boolean validateMove(Move move) {
-        Cell cell = move.getCell();
-        int row = cell.getRow();
-        int col = cell.getCol();
-
-        return row >= 0 && row < game.getBoard().getDimension() &&
-                col >= 0 && col < game.getBoard().getDimension() &&
-                game.getBoard().getBoard().get(row).get(col).getCellState().equals(CellState.EMPTY);
     }
 
     private boolean checkWinner(Move move) {

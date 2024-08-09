@@ -17,4 +17,8 @@ public class TicketRepository {
         ticketMap.put(ticket.getId(), ticket);
         return ticket;
     }
+
+    public Ticket findTicketById(Long ticketId) {
+        return ticketMap.get(ticketId);
+    }
 }

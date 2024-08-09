@@ -21,14 +21,13 @@ public class Game {
 
     private Game(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) {
         this.players = players;
-        this.moves = new ArrayList<>();
         this.board = new Board(dimension);
-        this.gameState = GameState.IN_PROGRESS;
         this.winningStrategies = winningStrategies;
+        this.moves = new ArrayList<>();
+        this.gameState = GameState.IN_PROGRESS;
         Random rand = new Random();
         this.nextPlayerIndex = rand.nextInt(players.size());
     }
-
 
     // Builder
     public static Builder getBuilder() {

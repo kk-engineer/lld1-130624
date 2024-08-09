@@ -19,7 +19,7 @@ public class DiagonalWinningStrategy implements WinningStrategy {
 
         // left diagonal => row==col
         if (row == col) {
-            // check in symbol present in map
+            // check if symbol present in map
             if (!leftDiagonal.containsKey(symbol)) {
                 leftDiagonal.put(symbol, 0);
             }
@@ -28,7 +28,7 @@ public class DiagonalWinningStrategy implements WinningStrategy {
         }
 
         // right diagonal => row+col == dimension - 1
-        if ( (row + col) == board.getDimension() - 1) {
+        if ( (row + col) == board.getDimension() -1) {
             if (!rightDiagonal.containsKey(symbol)) {
                 rightDiagonal.put(symbol, 0);
             }
