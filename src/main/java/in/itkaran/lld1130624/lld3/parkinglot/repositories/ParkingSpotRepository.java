@@ -32,15 +32,20 @@ public class ParkingSpotRepository {
     }
 
     public Optional<ParkingSpot> findParkingSpotBySpotNumberAndFloorId(String spotNumber, Long parkingFloorId) {
-        return parkingSpotMap.values().stream().filter(parkingSpot -> parkingSpot.getSpotNumber().equals(spotNumber) && parkingSpot.getParkingFloorId().equals(parkingFloorId)).findFirst();
+        return parkingSpotMap.values().stream().filter(
+                parkingSpot -> parkingSpot.getSpotNumber().
+                equals(spotNumber) && parkingSpot.getParkingFloorId().
+                equals(parkingFloorId)).findFirst();
     }
 
     public List<ParkingSpot> findAll() {
         return List.copyOf(parkingSpotMap.values());
     }
 
-    public List<ParkingSpot> findAllByParkingSpotStatus(ParkingSpotStatus parkingSpotStatus) {
-        return parkingSpotMap.values().stream().filter(parkingSpot -> parkingSpot.getStatus() == parkingSpotStatus).toList();
+    public List<ParkingSpot> findAllByParkingSpotStatus(
+            ParkingSpotStatus parkingSpotStatus) {
+        return parkingSpotMap.values().stream().filter(
+                parkingSpot -> parkingSpot.getStatus() == parkingSpotStatus).toList();
     }
 
 }

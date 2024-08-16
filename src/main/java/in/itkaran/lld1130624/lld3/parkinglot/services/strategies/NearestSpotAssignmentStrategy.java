@@ -7,7 +7,8 @@ import in.itkaran.lld1130624.lld3.parkinglot.repositories.ParkingSpotRepository;
 
 public class NearestSpotAssignmentStrategy implements SpotAssignmentStrategy {
     @Override
-    public ParkingSpot assignSpot(VehicleType vehicleType, Gate gate, ParkingSpotRepository parkingRepository) {
+    public ParkingSpot assignSpot(VehicleType vehicleType, Gate gate,
+                                  ParkingSpotRepository parkingRepository) {
         return null;
     }
 }

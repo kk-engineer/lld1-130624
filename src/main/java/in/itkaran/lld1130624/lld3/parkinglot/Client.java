@@ -25,7 +25,6 @@ public class Client {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-
     private static final TicketService ticketService = new TicketService(
             ticketRepository,
             gateRepository,
