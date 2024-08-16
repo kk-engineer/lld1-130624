@@ -10,10 +10,12 @@ import java.util.List;
 public class ParkingSpot extends BaseModel {
     private ParkingSpotStatus status;
     private List<VehicleType> supportedVehicleTypes;
-    private int spotNumber;
+    private String spotNumber;
     private Long parkingFloorId;
 
     public String toString() {
-        return "" + spotNumber;
+        return "Spot Number: " + spotNumber +  "\n" +
+                "Parking Floor Number: " + parkingFloorId + "\n" +
+                "Status: " + status;
     }
 }

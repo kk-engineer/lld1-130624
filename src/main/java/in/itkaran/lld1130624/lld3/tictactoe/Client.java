@@ -44,7 +44,6 @@ public class Client {
         // Game Over
         System.out.println("Game Over!");
         gameController.printBoard();
-
         if (gameController.getGameState().equals(GameState.ENDED)) {
             System.out.println(gameController.getWinner().getName() +
                     " Symbol " + gameController.getWinner().getSymbol().getSymbol() +

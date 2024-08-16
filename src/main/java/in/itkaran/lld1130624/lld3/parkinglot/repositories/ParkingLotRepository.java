@@ -2,11 +2,11 @@ package in.itkaran.lld1130624.lld3.parkinglot.repositories;
 
 import in.itkaran.lld1130624.lld3.parkinglot.models.ParkingLot;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class ParkingLotRepository {
-    private Map<Long, ParkingLot> parkingLotMap = new HashMap<>();
+    private Map<Long, ParkingLot> parkingLotMap = new TreeMap<>();
     private Long previousParkingLotId = 0L;
 
     public ParkingLot findParkingLotById(Long previousParkingLotId) {

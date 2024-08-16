@@ -2,13 +2,13 @@ package in.itkaran.lld1130624.lld3.parkinglot.repositories;
 
 import in.itkaran.lld1130624.lld3.parkinglot.models.Vehicle;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 
 public class VehicleRepository {
-    private Map<Long, Vehicle> vehicleMap = new HashMap<>();
-    private Map<String, Vehicle> vehicleNumberMap = new HashMap<>();
+    private Map<Long, Vehicle> vehicleMap = new TreeMap<>();
+    private Map<String, Vehicle> vehicleNumberMap = new TreeMap<>();
     private Long previousVehicleId = 0L;
 
     public Vehicle save(Vehicle vehicle) {

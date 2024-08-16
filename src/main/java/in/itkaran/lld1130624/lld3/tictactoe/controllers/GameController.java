@@ -1,6 +1,5 @@
 package in.itkaran.lld1130624.lld3.tictactoe.controllers;
 
-import in.itkaran.lld1130624.lld3.tictactoe.models.Game;
 import in.itkaran.lld1130624.lld3.tictactoe.models.GameState;
 import in.itkaran.lld1130624.lld3.tictactoe.models.Player;
 import in.itkaran.lld1130624.lld3.tictactoe.services.GameService;
@@ -32,5 +31,9 @@ public class GameController {
 
     public Player getWinner() {
         return gameService.getWinner();
+    }
+
+    public void undoMove() {
+        gameService.undoMove();
     }
 }

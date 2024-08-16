@@ -2,11 +2,11 @@ package in.itkaran.lld1130624.lld3.parkinglot.repositories;
 
 import in.itkaran.lld1130624.lld3.parkinglot.models.ParkingFloor;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class ParkingFloorRepository {
-    private Map<Long, ParkingFloor> parkingFloorMap = new HashMap<>();
+    private Map<Long, ParkingFloor> parkingFloorMap = new TreeMap<>();
     private Long previousParkingFloorId = 0L;
 
     public ParkingFloor save(ParkingFloor parkingFloor) {

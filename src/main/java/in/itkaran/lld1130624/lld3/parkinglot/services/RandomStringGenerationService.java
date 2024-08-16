@@ -7,7 +7,7 @@ public class RandomStringGenerationService {
     //private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private static final Random RANDOM = new SecureRandom();
-    private static final int LENGTH = 10;
+    private static final int LENGTH = 7;
 
     public static String generateRandomAlphanumericString() {
         StringBuilder sb = new StringBuilder(LENGTH);

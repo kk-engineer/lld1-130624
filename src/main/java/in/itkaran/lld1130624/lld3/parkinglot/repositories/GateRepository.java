@@ -2,12 +2,12 @@ package in.itkaran.lld1130624.lld3.parkinglot.repositories;
 
 import in.itkaran.lld1130624.lld3.parkinglot.models.Gate;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 
 public class GateRepository {
-    private Map<Long, Gate> gateMap = new HashMap<>();
+    private Map<Long, Gate> gateMap = new TreeMap<>();
     private Long previousGateId = 0L;
 
     public Optional<Gate> findGateById(Long gateId) {
@@ -23,6 +23,11 @@ public class GateRepository {
             gate.setId(previousGateId);
         }
         gateMap.put(gate.getId(), gate);
+        return gate;
+    }
+
+    public Gate delete(Gate gate) {
+        gateMap.remove(gate.getId());
         return gate;
     }
 }

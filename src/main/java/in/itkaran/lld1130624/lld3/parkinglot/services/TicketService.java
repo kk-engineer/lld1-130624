@@ -2,10 +2,7 @@ package in.itkaran.lld1130624.lld3.parkinglot.services;
 
 import in.itkaran.lld1130624.lld3.parkinglot.exceptions.GateNotFoundException;
 import in.itkaran.lld1130624.lld3.parkinglot.models.*;
-import in.itkaran.lld1130624.lld3.parkinglot.repositories.GateRepository;
-import in.itkaran.lld1130624.lld3.parkinglot.repositories.ParkingLotRepository;
-import in.itkaran.lld1130624.lld3.parkinglot.repositories.TicketRepository;
-import in.itkaran.lld1130624.lld3.parkinglot.repositories.VehicleRepository;
+import in.itkaran.lld1130624.lld3.parkinglot.repositories.*;
 import in.itkaran.lld1130624.lld3.parkinglot.services.factory.SpotAssignmentStrategyFactory;
 import in.itkaran.lld1130624.lld3.parkinglot.services.strategies.SpotAssignmentStrategy;
 
@@ -17,15 +14,18 @@ public class TicketService {
     private GateRepository gateRepository;
     private VehicleRepository vehicleRepository;
     private ParkingLotRepository parkingLotRepository;
+    private ParkingSpotRepository parkingSpotRepository;
 
     public TicketService(TicketRepository ticketRepository,
                          GateRepository gateRepository,
                          VehicleRepository vehicleRepository,
-                         ParkingLotRepository parkingLotRepository) {
+                         ParkingLotRepository parkingLotRepository,
+                         ParkingSpotRepository parkingSpotRepository) {
         this.ticketRepository = ticketRepository;
         this.gateRepository = gateRepository;
         this.vehicleRepository = vehicleRepository;
         this.parkingLotRepository = parkingLotRepository;
+        this.parkingSpotRepository = parkingSpotRepository;
     }
 
     public Ticket issueTicket(Long gateId,
@@ -66,7 +66,7 @@ public class TicketService {
         ParkingLot parkingLot = parkingLotRepository.findParkingLotById(parkingLotId);
         SpotAssignmentStrategyType spotAssignmentStrategyType = parkingLot.getSpotAssignmentStrategyType();
         SpotAssignmentStrategy spotAssignmentStrategy = SpotAssignmentStrategyFactory.getSpotAssignmentStrategy(spotAssignmentStrategyType);
-        ParkingSpot parkingSpot = spotAssignmentStrategy.assignSpot(vehicleType, gate);
+        ParkingSpot parkingSpot = spotAssignmentStrategy.assignSpot(vehicleType, gate, parkingSpotRepository);
         ticket.setParkingSpot(parkingSpot);
         // Set a random alphanumeric string for the ticket
         ticket.setNumber(RandomStringGenerationService.generateRandomAlphanumericString());
