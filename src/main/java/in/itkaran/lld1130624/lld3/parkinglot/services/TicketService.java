@@ -65,7 +65,8 @@ public class TicketService {
         Long parkingLotId = gate.getParkingLot().getId();
         ParkingLot parkingLot = parkingLotRepository.findParkingLotById(parkingLotId);
         SpotAssignmentStrategyType spotAssignmentStrategyType = parkingLot.getSpotAssignmentStrategyType();
-        SpotAssignmentStrategy spotAssignmentStrategy = SpotAssignmentStrategyFactory.getSpotAssignmentStrategy(spotAssignmentStrategyType);
+        SpotAssignmentStrategy spotAssignmentStrategy = SpotAssignmentStrategyFactory.
+                                                            getSpotAssignmentStrategy(spotAssignmentStrategyType);
         ParkingSpot parkingSpot = spotAssignmentStrategy.assignSpot(vehicleType, gate, parkingSpotRepository);
         ticket.setParkingSpot(parkingSpot);
         // Set a random alphanumeric string for the ticket
